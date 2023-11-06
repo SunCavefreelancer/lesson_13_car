@@ -1,0 +1,339 @@
+/* =======Підключення шрифтів вручну======= */
+@import url("fonts.css");
+
+/*=======Скидання стилів=======*/
+@import url("reset.css");
+
+body {
+	background: url(../img/fon.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+	padding: 350px 10px 120px 10px;
+}
+
+/* для усіх "__container" однаково */
+[class*="__conteiner"] {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+
+
+
+/* ------------------------------- */
+/* .main {} */
+
+.car {
+	padding: 200px 0px 80px 0px;
+	position: relative;
+	max-width: 550px;
+	margin: 0 auto;
+}
+
+/* ------------------------------- */
+.right {
+	width: 260px;
+	height: 180px;
+	background: linear-gradient(169deg, rgba(244,10,57,1) 0%, rgba(68,15,24,1) 12%, rgba(249,35,61,1) 28%, rgba(31,3,3,1) 48%, rgba(247,22,47,1) 66%, rgba(45,12,16,1) 97%, rgba(255,2,36,1) 100%);
+	border-radius: 100% 0% 89% 11% / 44% 100% 0% 56%;
+	border: 4px solid #6d0101;
+	filter: drop-shadow(-10px 0px 4px #101011);
+
+	perspective: 300px;
+	position: relative;
+	z-index: 2;
+}
+.right::before { /* круг под колесом */
+	content: "";
+	display: inline-block;
+	width: 167px;
+	height: 95px;
+	background-color: #000;
+	position: absolute;
+	top: 81px;
+	left: 84px;
+	border-radius: 52% 48% 95% 5% / 100% 100% 0% 0%;	 
+	border: 5px solid #232222;
+}
+.right::after { /* полоска под колесом */
+	content: "";
+	display: inline-block;
+	width: 100%;
+	height: 10px;
+	background-color: #000;
+	border-radius: 90% 0 0 0;
+
+	position: absolute;
+	bottom: -5px;
+	left: 4px;
+	z-index: 1;
+}
+
+.right__hood::before { /* logo */
+	background: url(../img/logo.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 150px;
+	height: 50px;
+	content: "";
+	display: inline-block;
+	z-index: 2;
+
+	position: absolute;
+	top: 0px;
+	left: -60px;
+	transform: rotateY(-50deg);
+	filter: drop-shadow(10px 0px 4px #101011);
+}
+
+
+
+/* фара */
+.right__headlight {
+	width: 70px;
+	height: 32px;
+/* фон фары */
+	background-image:
+	linear-gradient(to right bottom, rgba(255,255,255,0) 8px, #fff 9px, rgba(255,255,255,0) 10px),
+	linear-gradient(to left bottom, rgba(255,255,255,0) 8px, #fff 9px, rgba(255,255,255,0) 10px);
+	background-repeat: repeat;
+	background-size: 12px 14px, 12px 14px, 12px 11px;
+	background-position: 0 0, 0 0, 0 20px;
+/* фон фары */
+	border-radius:   0% 85% 54% 86% / 30% 70% 15% 80%;
+	border: 3px solid #000;
+	transform: rotateX(-200deg);
+
+	position: absolute;
+	top: 50px;
+	left: 30px;
+	filter: drop-shadow(10px -1px 4px #101011);
+	perspective: 400px;
+}
+.right__headlight::before, .right__headlight::after {
+	width: 20px;
+	height: 20px;
+		background: repeating-linear-gradient(45deg, white 10%, rgb(156, 156, 155) 20%);
+	content: "";
+	display: inline-block;
+	border-radius: 50%;
+	border: 1px solid #676565;
+	filter: drop-shadow(3px -1px 4px #838384);
+
+	position: absolute;
+	top: 2px;
+	left: 8px;
+	transform: rotate3d(1, 1, 1, 45deg);
+}
+.right__headlight::after {
+	position: absolute;
+	top: 4px;
+	left: 33px;
+}
+.right__headlight img{
+	width: 550px;
+	height: 180px;
+	position: relative;
+	bottom: 160px;
+	right: 520px;
+	transform: rotate(15deg);
+	visibility: hidden;
+}
+.right__headlight:hover img{
+	visibility: visible;
+}
+
+/* колесо */
+.right__wheel {
+	position: relative;
+}
+.right__wheel-image {
+	position: absolute;
+	top: 88px;
+	left: 88px;
+
+	z-index: 2; /* полоска под колесом */
+}
+.right__wheel-image img{	
+	width: 160px;
+	height: 160px;
+}
+
+
+
+
+
+/* ---------------center каркас------------------ */
+.center {
+	width: 345px;
+	height: 280px;
+	background: linear-gradient(169deg, rgba(244,10,57,1) 0%, rgba(68,15,24,1) 12%, rgba(249,35,61,1) 28%, rgba(31,3,3,1) 48%, rgba(247,22,47,1) 66%, rgba(45,12,16,1) 97%, rgba(255,2,36,1) 100%);
+	position: absolute;
+	top: 100px;
+	left: 245px;
+	border-radius: 55% 7% 0 0;
+	border: 4px solid #6d0101;
+	filter: drop-shadow(-10px 10px 4px #101011);
+}
+.center::after { /* полоска под колесом */
+	content: "";
+	display: inline-block;
+	width: 375px;
+	height: 10px;
+	background-color: #000;
+	border-bottom: 5px solid #000;
+
+	position: absolute;
+	bottom: -5px;
+	left: 4px;
+	z-index: 2 ;
+}
+
+.center__frame::after {
+	background: url(../img/reising.png); /* logo */
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	display: inline-block;
+	width: 250px;
+	height: 160px;
+
+	position: relative;
+	top: 80px;
+	left: 40px;
+
+	filter: drop-shadow(-10px 0px 4px #f5f4f495);
+
+	transform: rotateY(-180deg);
+}
+
+
+/* ---каркас--- */
+/* окно 1 */
+.frame__window-1 {
+	width: 180px;
+	height: 100px;
+	background-color: #323233;
+
+	position: absolute;
+	top: 7px;
+	left: 20px;
+	border-radius: 94% 6% 0% 100% / 100% 50% 50% 0%;
+	border: 3px solid #000;
+	perspective: 400px;
+	perspective-origin: 0 0;
+}
+.frame__window-1::after {
+	width: 17px;
+	height: 103px;
+	background-color: #000;
+	content: "";
+	display: inline-block;
+
+	position: absolute;
+	top: -3px;
+	right: -7px;
+	transform: rotateX(-10deg);
+}
+/* окно 2 */
+.frame__window-2 {
+	width: 130px;
+	height: 100px;
+	background-color: #272728fb;
+
+	position: absolute;
+	top: 7px;
+	left: 202px;
+	border-radius: 63% 20% 100% 0% / 0% 70% 0% 100%;
+	border: 3px solid #000;
+
+	perspective: 400px;
+	perspective-origin:right top (0 0);
+}
+.frame__window-2::before {
+	width: 17px;
+	height: 105px;
+	background-color: #000;
+	content: "";
+	display: inline-block;
+
+	position: absolute;
+	top: -3px;
+	left: -7px;
+	transform: rotateX(-20deg);
+}
+
+
+/* ----- */
+
+/* дверь 1 */
+.door__item--1 {
+	width: 180px;
+	height: 165px;
+	border: 1px solid #000;
+
+	position: absolute;
+	top: 105px;
+	left: 20px;
+	border-radius: 100% 0% 84% 16% / 0% 100% 0% 100%;
+}
+/* дверь 2 */
+.door__item--2 {
+	width: 135px;
+	height: 165px;
+	border: 1px solid #000;
+
+	position: absolute;
+	top: 105px;
+	right: 5px;
+	border-radius: 100% 0% 84% 16% / 0% 100% 0% 100%;
+	transform: rotateY(-180deg);
+}
+
+/* -------------------------------- */
+
+
+
+/* кузов, зад машины */
+.left {
+	width: 280px;
+	height: 160px;
+	background: linear-gradient(169deg, rgba(244,10,57,1) 17%, rgba(68,15,24,1) 40%, rgba(45,12,16,1) 97%, rgba(255,2,36,1) 100%);
+ 	position: absolute;
+	top: 221px;
+	right: -320px;
+	border: 4px solid #6d0101;
+	border-bottom: 10px solid #000;
+	z-index: 1;
+	filter: drop-shadow(10px 5px 4px #101011);
+}
+.left::before { /* круг под колесом */
+	content: "";
+	display: inline-block;
+	width: 170px;
+	height: 95px;
+	background-color: #000;
+	position: absolute;
+	top: 61px;
+	left: 13px;
+	border-radius: 52% 48% 95% 5% / 100% 100% 0% 0%;	 
+	border: 5px solid #232222;
+	z-index: 3;
+}
+/* зад машины  */
+.left__body {
+	position: absolute;
+	top: 70px;
+	right: 95px;
+	z-index: 3; /* полоска под колесом */
+}
+.left__image img {	
+	width: 160px;
+	height: 160px;
+}
