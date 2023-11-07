@@ -1,0 +1,310 @@
+/* =======Підключення шрифтів вручну======= */
+@import url("fonts.css");
+
+/*=======Скидання стилів=======*/
+@import url("reset.css");
+
+
+
+body {
+
+}
+
+.wrapper {	
+	overflow: clip;
+	min-height: 100%;
+}
+
+/* для усіх "__container" однаково */
+[class*="__conteiner"] {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0px 10px;
+}
+
+
+
+
+/* ------header------- */
+.header {}
+/* ------------- */
+
+
+/* ------section-2d------- */
+.section-2d {
+	margin-bottom: 80px;
+}
+
+
+h2 {
+	padding: 50px 0px 0px 0px;
+	font-size: 50px;
+	font-weight: 800;
+	color: rgb(139, 0, 139);
+	text-align: center;
+	text-shadow: 1px 0 0 #000;
+	margin-bottom: 30px;
+}
+h3 {
+	max-width:850px;
+	margin: 0 auto;
+	font-size: 25px;
+	font-weight: 700;
+	color: rgb(95, 95, 95);
+	text-align: center;
+	margin-bottom: 30px;
+}
+/* ------------- */
+.methods-2d {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 30px 5px 80px 15px;
+}
+
+
+.methods-2d__box:not(:last-child) {
+	margin-bottom: 120px;
+	margin-right: 130px;
+}
+
+.methods-2d__box {
+	width: 260px;
+	height: 260px;
+	background-color: rgba(139, 0, 139, 0.272);
+	display: inline-block;
+}
+.methods-2d__box p {
+	font-size: 27px;
+	color: navy;
+	text-align: center;
+	font-weight: 800;
+	padding: 15px 20px;
+	text-transform: capitalize;
+}
+.methods-2d__item {
+	width: 260px;
+	height: 260px;
+	background-color: rgb(139, 0, 139);
+}
+
+/* hover */
+.methods-2d__item--1:hover {
+	transform: translate(30px, 30px);
+}
+.methods-2d__item--2:hover {
+	transform: rotate(20deg);
+}
+.methods-2d__item--3:hover {
+	transform: rotate(-20deg);
+}
+.methods-2d__item--4:hover {
+	transform: scale(0.5);
+}
+.methods-2d__item--5:hover {
+	transform: scaleX(1.8);
+}
+.methods-2d__item--6:hover {
+	transform: scaleY(1.5);
+}
+.methods-2d__item--7:hover {
+	transform: skew(20deg, 10deg);
+}
+.methods-2d__item--8:hover {
+	transform: skewX(20deg);
+}
+.methods-2d__item--9:hover {
+	transform: skewY(20deg);
+}
+.methods-2d__item--10:hover {
+	transform: matrix(1, -0.3, 0, 1, 0, 0);
+}
+
+h4 {
+	text-align: center;
+	color: #000;
+}
+/* ---------------- */
+
+/* ------------- */
+.methods-3d {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 30px 5px 30px 15px;
+}
+
+
+.methods-3d__box:not(:last-child) {
+	margin-bottom: 50px;
+	margin-right: 130px;
+}
+
+.methods-3d__box {
+	width: 260px;
+	height: 260px;
+	background-color: rgba(139, 0, 139, 0.272);
+	display: inline-block;
+}
+.methods-3d__box p {
+	font-size: 27px;
+	color: navy;
+	text-align: center;
+	font-weight: 800;
+	padding: 15px 20px;
+	text-transform: capitalize;
+}
+.methods-3d__item {
+	width: 260px;
+	height: 260px;
+	background-color: rgb(139, 0, 139);
+}
+
+/* ----hover---- */
+.methods-3d__item--1:hover {
+	transform: rotateX(250deg);
+}
+.methods-3d__item--2:hover {
+	transform: rotateY(250deg);
+}
+.methods-3d__item--3:hover {
+	transform: rotateZ(250deg);
+}
+
+/* -----perspective----- */
+
+.methods-perspective {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 30px 5px 30px 15px;
+
+}
+
+.methods-perspective__box p {
+	font-size: 27px;
+	color: navy;
+	text-align: center;
+	font-weight: 800;
+	padding: 15px 20px;
+	text-transform: capitalize;
+}
+.methods-perspective__box--1 {
+	width: 260px;
+	height: 260px;
+	perspective: 200px;
+	background-color: rgb(2, 243, 251);
+}
+.methods-perspective__item {
+	width: 260px;
+	height: 260px;
+	background-color: rgb(255, 158, 3);
+}
+.methods-perspective__item--1:hover {	
+	transform: rotateX(45deg);
+}
+
+/* 2 */
+
+.methods-perspective__box {
+	display: inline-block;
+	margin-right: 120px;
+	margin-bottom: 150px;
+}
+.methods-perspective__box--2 {
+	width: 260px;
+	height: 260px;
+	background-color: darkgrey;
+	perspective: 900px;
+}
+.methods-perspective__item--2:hover {
+
+	transform-style: preserve-3d;
+	transform: rotateX(180deg);
+	transition: 0.5s;
+}
+
+/* 3 */
+
+.methods-perspective__box {
+	display: inline-block;
+	margin-right: 120px;
+}
+.methods-perspective__box--3 {
+	width: 260px;
+	height: 260px;
+	background-color: rgb(193, 6, 6);
+	perspective: 900px;
+}
+.methods-perspective__item--3:hover {
+
+	transform-style: preserve-3d;
+	transform: rotateY(180deg);
+	transition: 0.5s;
+}
+
+
+/* 4 */
+
+.methods-perspective__box {
+	display: inline-block;
+	margin-right: 120px;
+}
+.methods-perspective__box--4 {
+	width: 260px;
+	height: 260px;
+	background-color: rgb(43, 193, 6);
+	perspective: 900px;
+}
+.methods-perspective__item--4:hover {
+
+	transform-style: preserve-3d;
+	transform: rotateY(360deg);
+	transition: 0.8s;
+}
+
+/* --------------------------------- */
+
+
+
+/* =============================flip=============================== */
+.flip {
+	margin: 0 auto;
+	padding: 0 20px 50px 20px;
+	max-width: 300px;
+}
+.flip__body {	
+	position: relative;
+	width: 250px;
+	height: 250px;
+
+	perspective: 500px;
+}
+
+.flip__front,
+.flip__back {
+	position: absolute; 
+	width: 100%; 
+	height: 100%; 
+	top: 0; 
+	left: 0; 
+	transition: 0.8s;
+}
+
+.flip__front {
+	background-color: chartreuse;
+	transform: rotateY(0deg);
+
+	backface-visibility: hidden; /* сховали front інакше буде "ізнанка" сторінки*/
+}
+.flip__back {
+	background-color: crimson;
+	transform: rotateY(-180deg);
+}
+
+.flip__body:hover .flip__back {
+	transform: rotateY(0deg);
+}
+
+.flip__body:hover .flip__front{  /* показали front */
+	transform: rotateY(180deg);
+}
+
+/* --------------------------------------------------------- */
